@@ -17,9 +17,8 @@ public class Main {
      
      int[] sumaColumnas = sumaColumnas(matriz);
      
-     for(int i = 0;i<sumaColumnas.length;i++){
-         System.out.print(sumaColumnas[i] + "");
-     }
+     int sumaDiagonales2 = sumaDiagonales2(matriz);
+        System.out.println(sumaDiagonales2);
     }
     
     public int[] sumaDiagonales1(int [][] matrizEntrada) {
