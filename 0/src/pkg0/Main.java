@@ -13,7 +13,13 @@ public class Main {
      n = pedirN();
      int[][] matriz = new int[n][n];
      pedirMatriz(n,matriz);
-     imprimirMatriz(matriz,n);
+     //imprimirMatriz(matriz,n);
+     
+     int[] sumaColumnas = sumaColumnas(matriz);
+     
+     for(int i = 0;i<sumaColumnas.length;i++){
+         System.out.print(sumaColumnas[i] + "");
+     }
     }
     
     
@@ -35,6 +41,17 @@ public class Main {
                matriz[i][j] = reader.nextInt();
            }
        }  
+    }
+    
+    public static int[] sumaColumnas(int [][] matrizEntrada) {
+        int suma_columnas [] = new int [matrizEntrada.length];
+        for (int i = 0; i < matrizEntrada.length; ++i){
+            suma_columnas[i] = 0;
+            for (int j = 0; j < matrizEntrada[i].length; ++j){
+                suma_columnas[i] += matrizEntrada[i][j];
+            }
+        }
+        return suma_columnas;
     }
     
     public static void imprimirMatriz(int[][] matriz,int n){
