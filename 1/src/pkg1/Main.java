@@ -33,7 +33,7 @@ public class Main {
     public int[] sumaDiagonales2(int [][] matrizEntrada) {
         int suma_diagonales [] = new int [2];
         for (int i = 0; i < matrizEntrada.length; ++i){
-            suma_diagonales[i] += matrizEntrada[i][i];
+            suma_diagonales[i] += matrizEntrada[i][matrizEntrada.length - i - 1];
         }
         return suma_diagonales;
     }
