@@ -24,7 +24,7 @@ public class Main {
     
     public int[] sumaDiagonales1(int [][] matrizEntrada) {
         int suma_diagonales [] = new int [2];
-        for (int i = 0; i < suma_diagonales.length; ++i){
+        for (int i = 0; i < matrizEntrada.length; ++i){
                 suma_diagonales[i] += matrizEntrada[i][i];
         }
         return suma_diagonales;
@@ -33,10 +33,7 @@ public class Main {
     public int[] sumaDiagonales2(int [][] matrizEntrada) {
         int suma_diagonales [] = new int [2];
         for (int i = 0; i < matrizEntrada.length; ++i){
-            suma_diagonales[i] = 0;
-            for (int j = 0; j <= i; ++j){
-                suma_diagonales[i] += matrizEntrada[j][i];
-            }
+            suma_diagonales[i] += matrizEntrada[i][i];
         }
         return suma_diagonales;
     }
