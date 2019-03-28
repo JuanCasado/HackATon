@@ -21,19 +21,17 @@ public class Main {
         }
         return suma_columnas;
     }
-    /*
+    
     public int[] sumaDiagonales1(int [][] matrizEntrada) {
-        int suma_diagonales [] = new int [matrizEntrada.length];
-        for (int i = 0; i < matrizEntrada.length; ++i){
-            suma_diagonales[i] = 0;
-            for (int j = 0; j <= i; ++j){
-                suma_diagonales[i] += matrizEntrada[i][j];
-            }
+        int suma_diagonales [] = new int [2];
+        for (int i = 0; i < suma_diagonales.length; ++i){
+                suma_diagonales[i] += matrizEntrada[i][i];
         }
         return suma_diagonales;
     }
+    
     public int[] sumaDiagonales2(int [][] matrizEntrada) {
-        int suma_diagonales [] = new int [matrizEntrada.length];
+        int suma_diagonales [] = new int [2];
         for (int i = 0; i < matrizEntrada.length; ++i){
             suma_diagonales[i] = 0;
             for (int j = 0; j <= i; ++j){
@@ -42,5 +40,5 @@ public class Main {
         }
         return suma_diagonales;
     }
-   */
+   
 }
