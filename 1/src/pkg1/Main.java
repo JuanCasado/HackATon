@@ -37,5 +37,9 @@ public class Main {
         }
         return suma_diagonales;
     }
+    
+    public int calcularMagico (int n){
+        return n+(n*n +1)/2;
+    }
    
 }
