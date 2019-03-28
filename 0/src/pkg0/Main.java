@@ -22,6 +22,22 @@ public class Main {
      }
     }
     
+    public int[] sumaDiagonales1(int [][] matrizEntrada) {
+        int suma_diagonales [] = new int [2];
+        for (int i = 0; i < matrizEntrada.length; ++i){
+                suma_diagonales[i] += matrizEntrada[i][i];
+        }
+        return suma_diagonales;
+    }
+    
+    public int[] sumaDiagonales2(int [][] matrizEntrada) {
+        int suma_diagonales [] = new int [2];
+        for (int i = 0; i < matrizEntrada.length; ++i){
+            suma_diagonales[i] += matrizEntrada[i][matrizEntrada.length - i - 1];
+        }
+        return suma_diagonales;
+    }
+    
     
     public static int pedirN(){
       Scanner reader = new Scanner(System.in);
@@ -61,5 +77,37 @@ public class Main {
           }
           System.out.println();
        } 
+    }
+    
+    public int[] sumaFilas(int [][] matrizEntrada){
+        int[] matriz = new int[matrizEntrada.length];
+        int aux = 0;
+        for(int j = 0; j < matrizEntrada.length; j++){
+            for(int i = 0; i < matrizEntrada[j].length; i++){
+            aux += matrizEntrada[i][j];
+            }
+            matriz[j] = aux;
+        }
+        return matriz;
+    }
+    public int maxInd(int [][] matrizEntrada){
+        int aux = 0; 
+        for(int i = 0; i < matrizEntrada[i].length; i++){
+            for(int j = 0; j < matrizEntrada[j].length; j++)
+            if (aux < matrizEntrada[i][j]) aux = matrizEntrada[i][j];
+            }
+        return aux;
+    }
+    public int minInd(int [][] matrizEntrada){
+        int aux = 0; 
+        for(int i = 0; i < matrizEntrada[i].length; i++){
+            for(int j = 0; j < matrizEntrada[j].length; j++)
+            if (aux > matrizEntrada[i][j]) aux = matrizEntrada[i][j];
+            }
+        return aux;
+    }
+    
+    public int calcularMagico (int n){
+        return n+(n*n +1)/2;
     }
 }
