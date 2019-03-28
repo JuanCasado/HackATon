@@ -17,9 +17,8 @@ public class Main {
      
      int[] sumaColumnas = sumaColumnas(matriz);
      
-     for(int i = 0;i<sumaColumnas.length;i++){
-         System.out.print(sumaColumnas[i] + "");
-     }
+     int sumaDiagonales2 = sumaDiagonales2(matriz);
+        System.out.println(sumaDiagonales2);
     }
     
     
@@ -61,5 +60,21 @@ public class Main {
           }
           System.out.println();
        } 
+    }
+    
+    public static int sumaDiagonales1(int [][] matrizEntrada) {
+        int suma_diagonales = 0;
+        for (int i = 0; i < matrizEntrada.length; ++i){
+            suma_diagonales+= matrizEntrada[i][i];
+        }
+        return suma_diagonales;
+    }
+    
+    public static int sumaDiagonales2(int [][] matrizEntrada) {
+        int suma_diagonales =0 ;
+        for (int i = 0; i < matrizEntrada.length; ++i){
+            suma_diagonales+= matrizEntrada[i][matrizEntrada.length - i - 1];
+        }
+        return suma_diagonales;
     }
 }
