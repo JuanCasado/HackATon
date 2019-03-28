@@ -1,7 +1,7 @@
 /*
  * Mr.BlissfulGrin
  */
-package juan;
+package ej2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author mr.blissfulgrin
  */
-public class Juan {
+public class ej2 {
     static ArrayList<String> buffer1 = new  ArrayList<>();
     static ArrayList<String> buffer2 = new  ArrayList<>();
     static ArrayList<String> buffer3 = new  ArrayList<>();
